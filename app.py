@@ -10,7 +10,7 @@ load_dotenv()
 # --- 1. Basic Server Setup ---
 app = Flask(__name__)
 # CORS allows your future webpage to communicate with this server
-CORS(app) 
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # --- 2. Configure the Google AI API ---
 # It fetches the key you stored in the .env file
